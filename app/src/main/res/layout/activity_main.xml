@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Inventory"
+            android:fontFamily="monospace"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"/>
+
+        <GridLayout
+            android:layout_width="415dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterButton
+                    android:id="@+id/PrifileButton"
+                    android:layout_width="119dp"
+                    android:layout_height="81dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="cursive"
+                    android:text="Profile"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardElevation="5dp">
+
+                <ImageButton
+                    android:id="@+id/AddInventoryButton"
+                    android:layout_width="119dp"
+                    android:layout_height="81dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/addtoinventory" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="cursive"
+                    android:text="Add Inventory"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardElevation="5dp">
+
+                <ImageButton
+                    android:id="@+id/EditButton"
+                    android:layout_width="119dp"
+                    android:layout_height="81dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/edit" />
+
+                <TextView
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="cursive"
+                    android:text="Edit Orders"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageButton
+                    android:id="@+id/ListOrdersButton"
+                    android:layout_width="119dp"
+                    android:layout_height="81dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/orderlist" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="cursive"
+                    android:text="List of Orders"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardElevation="5dp">
+
+                <ImageButton
+                    android:id="@+id/ShippingButton"
+                    android:layout_width="119dp"
+                    android:layout_height="81dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shiping" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="cursive"
+                    android:text="Shipping"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardElevation="5dp">
+
+                <ImageButton
+                    android:id="@+id/AddCartButton"
+                    android:layout_width="119dp"
+                    android:layout_height="81dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/addtocart" />
+
+                <TextView
+                    android:layout_width="126dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="cursive"
+                    android:text="Add Order"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageButton
+                    android:id="@+id/InventoryButton"
+                    android:layout_width="119dp"
+                    android:layout_height="81dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/inventory" />
+
+                <TextView
+                    android:layout_width="121dp"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="cursive"
+                    android:text="Inventory"
+                    android:textColor="@color/black"
+                    android:textSize="28dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>
