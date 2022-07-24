@@ -2,7 +2,6 @@ package com.example.inventorymanagementexample
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
@@ -16,12 +15,12 @@ class DBHandler(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         // setting our column names
         // along with their data types.
         val query = ("CREATE TABLE " + TABLE_NAME + " ("
-                + ID_COL + "INTEGER PRIMARY KEY,"
+                + ID_COL + "INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + PRODUCT_NAME + " TEXT, "
                 + TYPE_COL + " TEXT,"
                 + BRAND_COL + " TEXT,"
-                + PRICE_COL + " INT,"
-                + QUANTITY_COL + " INT"+")")
+                + PRICE_COL + " TEXT,"
+                + QUANTITY_COL + " TEXT "+")")
 
         // at last we are calling a exec sql
         // method to execute above sql query
@@ -66,11 +65,6 @@ class DBHandler(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         db.close()
     }
 
-   //fun getData(): Cursor?
-  // {
-     //  val db = this.readableDatabase
-      // return db.rawQuery("SELECT * FROM " + TABLE_NAME, null)
-  // }
 
     companion object {
         // creating a constant variables for our database.
@@ -81,25 +75,25 @@ class DBHandler(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         private const val DB_VERSION = 1
 
         // below int is our row id
-        private const val ID_COL = "ID"
+        val ID_COL = "ID"
 
         // below variable is for our table name.
-        private const val TABLE_NAME = "Items Table"
+        val TABLE_NAME = "Items Table"
 
         // below variable is for our product name column
-        private const val PRODUCT_NAME = "Product Name"
+         val PRODUCT_NAME = "Product Name"
 
         // below variable is for our brand column.
-        private const val BRAND_COL = "Brand"
+        val BRAND_COL = "Brand"
 
         // below variable is for our type name column
-        private const val TYPE_COL = "Type"
+        val TYPE_COL = "Type"
 
         // below variable id for our quantity duration column.
-        private const val QUANTITY_COL = "Quantity"
+        val QUANTITY_COL = "Quantity"
 
         // below variable for our price description column.
-        private const val PRICE_COL = "Price"
+        val PRICE_COL = "Price"
 
 
     }

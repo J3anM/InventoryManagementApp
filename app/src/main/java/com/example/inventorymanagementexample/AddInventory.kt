@@ -14,6 +14,7 @@ class AddInventory : AppCompatActivity() {
             // a new DBHelper class,
             // and passed context to it
             val db = DBHandler(this, null)
+
             // making variables with the information from the text box
             val productName = idProductName.text.toString()
             val productType = idTypeofProduct.text.toString()
